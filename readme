@@ -1,0 +1,59 @@
+Student Management System
+
+This is a simple Student Management System (SMS) that allows users to perform CRUD (Create, Read, Update, Delete) operations on student records. The application uses HTML, CSS, Java, and SQL to create and manage a database of students.
+
+Features:
+	•	Add new student: Create a new student entry with details like name, email, and course.
+	•	View all students: View a list of all students stored in the database.
+	•	Update student details: Edit an existing student’s information.
+	•	Delete student record: Remove a student from the database.
+
+⸻
+
+Technologies Used:
+	•	Frontend: HTML, CSS
+	•	Backend: Java (Servlets)
+	•	Database: MySQL
+
+⸻
+
+Setup Instructions
+
+Prerequisites:
+	1.	JDK (Java Development Kit): Install JDK 8 or higher.
+	2.	MySQL: Install MySQL and create a database.
+	3.	IDE: Use an IDE like Eclipse or IntelliJ IDEA to write and run the Java code.
+	4.	Tomcat: Use Tomcat or another servlet container to run the web application.
+
+Steps to Run:
+
+1. Database Setup:
+
+Create a MySQL database and table to store the student records.
+
+CREATE DATABASE sms_db;
+
+USE sms_db;
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    course VARCHAR(100) NOT NULL
+);
+
+2. Servlet Configuration:
+	•	Make sure you have the MySQL JDBC driver added to your project’s classpath.
+	•	Create the StudentServlet.java file under the src folder of your project.
+	•	Set up the web.xml configuration for your servlet.
+
+3. Deploying the Application:
+	•	After setting up the database and servlet, deploy the web application on a servlet container (e.g., Apache Tomcat).
+	•	Navigate to the index.html page in your browser. This will display the student management form.
+
+How to Use:
+	1.	Add Student: Fill in the form with the student’s name, email, and course, then click “Add Student”.
+	2.	View Students: The list of all students in the database will be displayed in a table below the form.
+	3.	Edit Student: Click the “Edit” button next to the student you want to update. (This functionality needs to be added in the servlet and form if not yet implemented).
+	4.	Delete Student: Click the “Delete” button to remove a student from the database.
+
